@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./fonts/fontawesome/css/all.min.css" rel="stylesheet" >
+  <link href="./fonts/fontawesome/css/regular.css" rel="stylesheet" >
   <link href="./css/app.min.css" rel="stylesheet">
 </head>
 <body class="h-full">
@@ -17,7 +19,7 @@
   ```
 -->
 <div class="min-h-full">
-  <nav class="bg-gray-800">
+  <nav class="bg-gray-800 fixed w-full z-50 h-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
@@ -32,7 +34,7 @@
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
               <!--Solutions-->
               <div class="relative">
-                <button type="button" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 group inline-flex items-center rounded-md text-sm font-medium  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
+                <button type="button" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 group inline-flex items-center rounded-md text-sm font-medium  focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false">
                   <span>Solutions</span>
                   <!--
                     Heroicon name: mini/chevron-down
@@ -53,7 +55,7 @@
                 From: "opacity-100 translate-y-0"
                 To: "opacity-0 translate-y-1"
             -->
-            <div class="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
+            <div class="absolute z-10 -ml-4 mt-1 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
               <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                   <a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
@@ -144,7 +146,7 @@
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
               <div class="relative">
                 <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-                <button type="button" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 group inline-flex items-center rounded-md text-sm font-medium  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
+                <button type="button" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 group inline-flex items-center rounded-md text-sm font-medium  focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-expanded="false">
                   <span>More</span>
                   <!--
                     Heroicon name: mini/chevron-down
@@ -166,7 +168,7 @@
                     From: "opacity-100 translate-y-0"
                     To: "opacity-0 translate-y-1"
                 -->
-                <div class="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
+                <div class="absolute left-1/2 z-10 mt-1 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
                   <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                     <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                       <a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
@@ -245,7 +247,48 @@
         </div>
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
-            <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <!--Buscador-->
+            <div class="relative mt-4 md:mt-0">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                      <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+              </span>
+
+              <input type="text" class="w-full py-1 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600  focus:outline-none focus:ring-2 focus:ring-indigo-500 " placeholder="Search">
+          </div>
+          <button type="button" class="ml-3 rounded-full  bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="sr-only">View search</span>
+            <!-- Heroicon name: outline/bell -->
+              <i class="fa-solid fa-magnifying-glass w-6" ></i>
+          </button>
+          <!--Idioma-->
+          <div class="relative ml-3">
+                 <button type="button" class=" rounded-full  bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                  <span class="sr-only">View notifications</span>
+                  <!-- Heroicon name: outline/bell -->
+                    <i class="fa-regular fa-bell w-6" ></i>
+                </button>
+                
+              <!--
+                Dropdown menu, show/hide based on menu state.
+
+                Entering: "transition ease-out duration-100"
+                  From: "transform opacity-0 scale-95"
+                  To: "transform opacity-100 scale-100"
+                Leaving: "transition ease-in duration-75"
+                  From: "transform opacity-100 scale-100"
+                  To: "transform opacity-0 scale-95"
+              -->
+              <div class="absolute right-0 z-10 mt-2 w-24 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                <!-- Active: "bg-gray-100", Not Active: "" -->
+                <button type="button" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="lang1">Español</button>
+
+                <button type="button" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="lang2">English</button>
+              </div>
+          </div>
+          <!--Notificaciones-->
+            <button type="button" class="ml-3 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
               <span class="sr-only">View notifications</span>
               <!-- Heroicon name: outline/bell -->
               <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -272,7 +315,7 @@
                   From: "transform opacity-100 scale-100"
                   To: "transform opacity-0 scale-95"
               -->
-              <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <div class="absolute right-0 z-10 mt-1 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
 
@@ -349,8 +392,18 @@
       </div>
     </div>
   </nav>
-
-  <header class="bg-white shadow">
+  <aside class="w-64 bg-gray-800 fixed top-40 bottom-16 z-40 rounded-r-md">
+      <!-- Pin to top left corner -->
+<div class="relative h-8 w-8 top-2">
+     <!--Flecha-->
+     <button type="button" class="ml-3  h-8 w-8 rounded-full bg-gray-900 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+      <span class="sr-only">View notifications</span>
+      <!-- Heroicon name: outline/bell -->
+      <i class="fa-sharp fa-solid fa-chevron-left"></i>
+    </button>
+</div>
+  </aside>
+  <header class="bg-white shadow pt-16">
     <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
     </div>
@@ -359,11 +412,47 @@
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <!-- Replace with your content -->
       <div class="px-4 py-6 sm:px-0">
-        <div class="h-96 rounded-lg border-4 border-dashed border-gray-200"></div>
+        <div class=" rounded-lg border-4 border-dashed border-gray-200">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit fugiat quis iure impedit, ipsa voluptatem eum alias amet. Delectus nobis exercitationem est eos unde necessitatibus sapiente maxime optio ex? Impedit?</p>
+          <p>Sint, facilis veritatis. Modi assumenda quam impedit, esse magni illum? Temporibus sit labore inventore maxime pariatur ipsum atque commodi, reprehenderit dolore totam illum magni. Tempore necessitatibus hic ea explicabo. Fugiat.</p>
+          <p>Quae autem ad voluptates nobis. Quod molestiae minima recusandae quibusdam repellendus repellat ipsum, iure veritatis libero magni explicabo. Incidunt omnis totam natus ipsum eum ut ea laudantium excepturi quidem dicta!</p>
+          <p>Earum ea tenetur ullam possimus blanditiis, autem animi enim perspiciatis ab esse ipsam fugit a facilis temporibus eum officia maiores reiciendis iure, quia ex corporis exercitationem ad architecto! Recusandae, magni!</p>
+          <p>Sint obcaecati ullam incidunt sequi voluptates sunt doloribus. Beatae vel laboriosam, nostrum eius tenetur qui pariatur corrupti debitis officiis nesciunt voluptate perspiciatis voluptatum, voluptates facilis expedita vero ex assumenda culpa.</p>
+          <p>Obcaecati tenetur aperiam illo voluptatem quaerat rerum modi eum cumque aliquid quos adipisci tempore magni expedita quidem corrupti, voluptatibus tempora quis iste dolorum. Dolore officiis, rem perspiciatis velit nostrum exercitationem.</p>
+          <p>Expedita quae tempora optio voluptates quos! Libero mollitia facilis voluptatem non vitae facere exercitationem rem expedita, aspernatur repudiandae ipsa. Nesciunt, non! Impedit non excepturi nostrum! In dignissimos incidunt rem accusantium.</p>
+          <p>Doloribus dicta corrupti modi dignissimos tempore laborum dolor sit maiores asperiores? Perspiciatis, praesentium error laboriosam ad pariatur numquam excepturi et rerum consectetur saepe qui provident repellendus, cum at? Eveniet, consequatur.</p>
+          <p>Iusto quia dolore perspiciatis porro, asperiores doloribus quod est sunt aliquid sapiente mollitia temporibus illum, facere illo nesciunt id? Enim natus omnis ab voluptatum, blanditiis maxime assumenda quia mollitia tenetur.</p>
+          <p>Et asperiores quam voluptate natus excepturi suscipit libero praesentium non voluptatum? Voluptates, maxime assumenda? Obcaecati repellendus odit libero reiciendis deserunt labore quam dolorem dignissimos quae, quaerat, possimus incidunt, sapiente id.</p>
+          <p>Culpa soluta dolores labore, adipisci consequuntur ut at sed eum, doloribus illo optio aliquid doloremque? Dolores autem accusantium perspiciatis necessitatibus quasi fugit omnis repellat hic, animi vitae excepturi voluptatibus dolore.</p>
+          <p>Facere sint obcaecati ratione tempora et tenetur officia doloremque error nulla, quasi officiis expedita aut illo eveniet iure dolorum est sapiente cupiditate rem assumenda sequi eius? Ipsa iusto minima beatae.</p>
+          <p>Maxime obcaecati, impedit ut architecto placeat maiores! Voluptate officiis, aliquam atque ipsum ipsa repellendus excepturi aperiam quo. Laboriosam voluptatem magnam, suscipit ut nihil porro eum officia aliquid, perspiciatis blanditiis magni?</p>
+          <p>Quasi minima animi mollitia assumenda inventore rem esse eveniet ipsam nihil expedita, soluta enim quos odio tempora sapiente distinctio, minus quibusdam. Earum rerum modi cumque? Eum obcaecati fuga saepe quam.</p>
+          <p>Quasi obcaecati quia placeat magni quaerat atque ad quo culpa voluptatum nisi, consequatur temporibus excepturi labore quibusdam, id totam recusandae? Optio natus aspernatur sint, eligendi sapiente dolor excepturi iure consequatur?</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure suscipit voluptas accusamus ipsum asperiores reprehenderit voluptatem est numquam corrupti similique possimus, libero mollitia tenetur dolor veritatis. Eum nobis ipsam tempore?</p>
+          <p>Ipsa ea sed excepturi provident, sapiente dolores rerum dolor esse exercitationem quos repellendus neque consequuntur tenetur sit. Ullam laboriosam, enim fugit aut labore dignissimos officia, repellendus delectus reiciendis commodi minus.</p>
+          <p>Recusandae consequatur, nam facere in, natus fuga quae reprehenderit quas velit nulla architecto facilis, ea animi corporis exercitationem neque itaque necessitatibus consequuntur tempora. Labore alias quis cupiditate eligendi, sint aperiam!</p>
+          <p>Unde repellat est quasi explicabo ipsam fuga porro ut quidem vitae nostrum soluta a odio esse sit dolorum, nobis natus doloremque necessitatibus autem! Nisi tempore totam quasi perspiciatis est illo.</p>
+          <p>Iure esse cum, quia maiores dolorum autem quisquam? Dolor eligendi expedita laudantium voluptates natus voluptate, dolorem et similique incidunt ullam, itaque quos tempora, dolores culpa magni amet optio labore. Odit.</p>
+          <p>Perferendis error facere recusandae repudiandae facilis impedit ullam, minima, voluptates aspernatur, id eveniet! Nemo porro laboriosam, corporis nihil veniam eveniet, reprehenderit dolor cupiditate molestias voluptate ipsam, asperiores molestiae necessitatibus possimus.</p>
+          <p>Excepturi laudantium perferendis eveniet, molestiae et illo aut ea accusantium autem nemo libero unde aliquid nihil, atque neque ullam quam velit voluptatibus, delectus a nostrum ratione. Animi, tenetur! Dignissimos, totam?</p>
+          <p>Unde nisi numquam quidem, expedita ipsa, voluptatibus saepe at officiis inventore commodi illo enim quibusdam ab, sit reprehenderit animi. Nihil quae unde fuga et assumenda. Ad laboriosam quisquam error at.</p>
+          <p>Ex iste maiores natus expedita ducimus autem deserunt nesciunt architecto. Fugit dicta dolore doloremque animi officiis totam facere eaque! Voluptas aperiam natus corrupti non deleniti doloribus explicabo a ratione est!</p>
+          <p>Totam error quo quis accusamus nesciunt, eius illum eum, quas aperiam cumque, ipsam eligendi modi voluptas laborum? Quibusdam, aspernatur quaerat libero, a numquam vel facere distinctio aliquam mollitia recusandae inventore.</p>
+        </div>
       </div>
       <!-- /End replace -->
     </div>
   </main>
+  <footer class="text-gray-400 bg-gray-800 body-font">
+    <div class="bg-gray-800 bg-opacity-75">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-400 text-sm text-center sm:text-left">© 2020 Tailblocks —
+          <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a>
+        </p>
+        <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-400 text-sm">Enamel pin tousled raclette tacos irony</span>
+      </div>
+    </div>
+  </footer>
 </div>
 
  
