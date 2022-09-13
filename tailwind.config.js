@@ -6,7 +6,14 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      colors: {
+        allianceblue: {
+          500: "#00ADEB",
+          900: "#004E9F",
+        },
+      },
+    },
   },
   plugins: [require("@tailwindcss/forms")],
 };
