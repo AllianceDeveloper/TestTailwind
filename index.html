@@ -22,7 +22,6 @@
     <div class="min-h-full">
       <nav class="bg-gray-800 fixed w-full z-50 h-16">
         <!--Barra superior MD-->
-        <!-- mx-auto max-w-full py-6 sm:px-6 lg:pr-12 lg:pl-72 -->
         <div class="mx-auto max-w-full px-4 sm:px-6 lg:px-12">
           <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
@@ -82,7 +81,7 @@
                 To: "opacity-0 translate-y-1"
             -->
                     <div
-                      class="absolute z-10 -ml-4 mt-1 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2"
+                      class="hidden absolute z-10 -ml-4 mt-1 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2"
                     >
                       <div
                         class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
@@ -1392,7 +1391,7 @@ Leaving: "transition ease-in duration-150"
       <!-- w=64|0, si es 0, cambiar px de Main -->
       <aside class="w-64 bg-gray-800 fixed top-40 bottom-16 z-40 rounded-r-md">
         <!-- Pin to top left corner -->
-        <div class="relative h-8 w-8 top-2">
+        <div class="relative h-8 w-8 top-2 mb-4">
           <!--Flecha-->
           <button
             type="button"
@@ -1401,6 +1400,93 @@ Leaving: "transition ease-in duration-150"
             <span class="sr-only">View notifications</span>
             <!-- Heroicon name: outline/bell -->
             <i class="fa-sharp fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+        <!--Lista de menú lateral-->
+        <div class="mx-3 flex flex-col">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="#"
+            class="bg-gray-900 text-white px-3 py-2 mb-2 rounded-md text-sm font-medium"
+            aria-current="page"
+            >Item 1 active</a
+          >
+
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 mb-2 rounded-md text-sm font-medium"
+            >Item 2</a
+          >
+          <!--Solutions-->
+          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+          <button
+            type="button"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 mb-2 rounded-md text-sm font-medium inline-flex justify-between focus:outline-none focus:ring-2 focus:ring-allianceblue-500"
+            aria-expanded="false"
+          >
+            <span>Item 3 submenu</span>
+            <!--
+                Heroicon name: mini/chevron-down
+  
+                Item active: "text-gray-600", Item inactive: "text-gray-400"
+              -->
+            <svg
+              class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 mb-2 rounded-md text-sm font-medium"
+            >Item 4 with large description</a
+          >
+
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 mb-2 rounded-md text-sm font-medium"
+            >Item 5</a
+          >
+
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 mb-2 rounded-md text-sm font-medium"
+            >Item 6</a
+          >
+          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+          <button
+            type="button"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 mb-2 rounded-md text-sm font-medium inline-flex justify-between focus:outline-none focus:ring-2 focus:ring-allianceblue-500"
+            aria-expanded="false"
+          >
+            <span>Item 7 with submenu</span>
+            <!--
+                Heroicon name: mini/chevron-down
+  
+                Item active: "text-gray-600", Item inactive: "text-gray-400"
+              -->
+            <svg
+              class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
           </button>
         </div>
       </aside>
